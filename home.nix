@@ -72,6 +72,7 @@
       syntaxHighlighting.enable = true;
       shellAliases = {
         addgithubkeys = "curl -s https://github.com/buungoo.keys >> ~/.ssh/authorized_keys";
+	lcd = "lazydocker";
       };
     };
     zoxide = {

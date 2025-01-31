@@ -48,7 +48,11 @@
   networking = {
     hostName = "nas0";
     networkmanager.enable = true;
-    firewall.enable = true;
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [ 49852 ];
+      allowedUDPPorts = [ 49852 ];
+    };
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
