@@ -63,7 +63,14 @@
 
   # Specify services that may be on the system
   services = {
-    openssh.enable = true;
+    openssh = {
+      enable = true;
+      settings = {
+        PasswordAuthentication = false; # Disable password authentication
+        PermitRootLogin = "prohibit-password"; # Only allow root login with SSH keys
+        KbdInteractiveAuthentication = false; # Disable interactive authentication
+      };
+    };
   };
 
   # Specify program that may be on the system
