@@ -55,6 +55,22 @@
     };
   };
 
+  services.fail2ban = {
+    enable = true;
+    maxretry = 3;
+    bantime = "3600";
+    jails = {
+      sshd = {
+        settings = {
+          enable = true;
+          port = "22";
+          filter = "sshd";
+          logpath = "/var/log/auth.log";
+        };
+      };
+    };
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.bungo = {
     isNormalUser = true;

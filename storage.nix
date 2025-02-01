@@ -37,6 +37,9 @@
     };  
 
   # SnapRAID
+  # Log files are found through
+  # sudo journalctl -u snapraid-sync.service
+  # sudo journalctl -u snapraid-scrub.service
   services.snapraid = {
     enable = true;
     #extraConfig = ''
@@ -87,6 +90,7 @@
       ".TemporaryItems"
       ".Trashes"
       ".AppleDB"
+      "/mnt/storage/media/downloads"
     ];
   };
 }
