@@ -50,20 +50,21 @@
     networkmanager.enable = true;
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 49852 ];
-      allowedUDPPorts = [ 49852 ];
+      # allowedTCPPorts = [ 49852 ];
+      # allowedUDPPorts = [ 49852 ];
+		# trustedInterfaces = [ "docker0" "br-477719a4defc" ];
     };
   };
 
   services.fail2ban = {
     enable = true;
     maxretry = 3;
-    bantime = "15m";
-    daemonSettings = {
-      Definition = {
-        logtarget = "/var/log/fail2ban.log";
-      };
-    };
+    bantime = "60m";
+    # daemonSettings = {
+    #   Definition = {
+    #     logtarget = "/var/log/fail2ban.log";
+    #   };
+    # };
     jails = {
 	  #    DEFAULT = {
 	  #      settings = {
@@ -117,6 +118,7 @@
     neovim
     lazydocker
     mergerfs
+	 lemonade
   ];
 
   # Enable virtualisation through docker

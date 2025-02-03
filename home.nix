@@ -72,7 +72,10 @@
       syntaxHighlighting.enable = true;
       shellAliases = {
         addgithubkeys = "curl -s https://github.com/buungoo.keys >> ~/.ssh/authorized_keys";
-	lcd = "lazydocker";
+		  lcd = "lazydocker";
+		  svim = "sudo XDG_CONFIG_HOME=$HOME/.config nvim";
+		  nx = "sudo nixos-rebuild --flake .";
+		  hm = "home-manager --flake .";
       };
     };
     zoxide = {
