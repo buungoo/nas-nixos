@@ -20,10 +20,10 @@
       options = [
         "defaults"
         "allow_other"
-	"fsname=mergerfs"
-        "cache.files=off"
+        "fsname=mergerfs"
+        "cache.files=partial"
         "category.create=mfs"
-	"dropcacheonclose=false"
+		  "dropcacheonclose=false"
         "moveonenospc=true"
         "minfreespace=20G"
       ];
