@@ -50,8 +50,8 @@
     networkmanager.enable = true;
     firewall = {
       enable = true;
-      # allowedTCPPorts = [ 49852 ];
-      # allowedUDPPorts = [ 49852 ];
+      allowedTCPPorts = [ 49852 ];
+      allowedUDPPorts = [ 49852 ];
 		# trustedInterfaces = [ "docker0" "br-477719a4defc" ];
     };
   };

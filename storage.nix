@@ -4,7 +4,7 @@
   # Media storage disks
   fileSystems."/mnt/disks/data0" =
     { device = "/dev/disk/by-label/Data0";
-      fsType = "btrfs";
+      fsType = "ext4";
     };
     
   # Mergerfs pool
