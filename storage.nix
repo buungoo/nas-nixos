@@ -90,7 +90,7 @@
       ".TemporaryItems"
       ".Trashes"
       ".AppleDB"
-      "/mnt/storage/media/downloads"
+      "downloads/"
     ];
   };
 }

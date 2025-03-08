@@ -6,6 +6,8 @@
       ./hardware-configuration.nix
       ./storage.nix
       ./fans.nix
+		./jobs.nix
+		./proxy.nix
     ];
 
   boot.loader = {
@@ -105,12 +107,14 @@
         KbdInteractiveAuthentication = false; # Disable interactive authentication
       };
     };
+	 tailscale = {
+		enable = true;
+	 };
   };
 
   # Specify program that may be on the system
   programs = {
     zsh.enable = true;
-    firefox.enable = true;
   };
 
   # List packages installed in system profile
@@ -118,6 +122,8 @@
     neovim
     lazydocker
     mergerfs
+	 btop
+	 tailscale
   ];
 
   # Enable virtualisation through docker
